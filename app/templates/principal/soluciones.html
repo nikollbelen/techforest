@@ -1,0 +1,99 @@
+{% extends 'principal/plantilla.html' %}
+{% load static %}
+
+{% block banner %}
+<div class="col-md-11 col-lg-8 col-xl-4 pb-9 pb-xl-9 text-center text-xl-start">
+    <h1 class="text-white fw-light text-center">TechForest</h1>
+    <p class="lead text-white opacity-75 text-center">
+        Regadero automatico controlado por tu celular desde cualquier parte del mundo.</p>
+</div>
+{% endblock banner %}
+
+{% block content %}
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section>
+
+    <div class="container">
+        <div class="row flex-center mt-8">
+            <div class="col-md col-lg-5 col-xl-4 ps-lg-6"><img class="img-fluid px-6 px-md-0"
+                    src="{% static 'assets/img/illustrations/data.png' %}" alt="" /></div>
+            <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                <h5 class="text-danger"><span class="far fa-lightbulb me-2"></span>INFORMACION</h5>
+                <h3>Informacion en tiempo real</h3>
+                <p>Tendras informacion en tiempo real sobre el estado de tus plantas.</p>
+            </div>
+        </div>
+        <div class="row flex-center mt-7">
+            <div class="col-md col-lg-5 col-xl-4 pe-lg-6 order-md-2"><img class="img-fluid px-6 px-md-0"
+                    src="{% static 'assets/img/illustrations/base-de-datos.png' %}"
+                    alt="" /></div>
+            <div class="col-md col-lg-5 col-xl-4 mt-4 mt-md-0">
+                <h5 class="text-info"> <span class="far fa-object-ungroup me-2"></span>CONTROLAR</h5>
+                <h3>Controlar la humedad</h3>
+                <p>Control sobre la humedad de tus plantas.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="bg-200 text-center">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-xl-8">
+                <div class="swiper-container theme-slider"
+                    data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="px-5 px-sm-6">
+                                <p class="fs-sm-1 fs-md-2 fst-italic text-dark">
+                                    TechForest es una gran opcion si queremos un sistema de riego, ya que nos ayudo
+                                    a monitorear el riego en nuestra siembra, asi como saber el estado de humedad de nuestras
+                                    plantas en tiempo real.
+                                </p>
+                                <p class="fs-0 text-600">- Michael Gelchie, Director ejecutivo</p><img class="w-auto mx-auto"
+                                    src="https://www.comunicaffe.com/wp-content/uploads/2016/12/Louis-Dreyfus-Company.png" alt="" height="45" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="px-5 px-sm-6">
+                                <p class="fs-sm-1 fs-md-2 fst-italic text-dark">Somos grandes admiradores del 
+                                    trabajo realizado por TechForest, ya que fue facil y eficiente implementar este sistema a nuestros sembradios.</p>
+                                <p class="fs-0 text-600">- Jorge Ramírez, Gerente</p><img class="w-auto mx-auto"
+                                    src="https://3.bp.blogspot.com/-T_YSCDnL9rM/W5XPNuxL2rI/AAAAAAAABIQ/LHSfc9ybKQsZDViscBfA8jbdEQBV_FRBgCLcBGAs/s1600/camposol.jpg" alt="" height="50" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="px-5 px-sm-6">
+                                <p class="fs-sm-1 fs-md-2 fst-italic text-dark">Cuando conoci el sistema de riego TechForest,
+                                    yo queria implementar tecnologia a mis filas, y TechForest no me decepciono.</p>
+                                <p class="fs-0 text-600">- José Bardales Wong, Gerente Agricola</p><img class="w-auto mx-auto"
+                                    src="https://www.palmas.com.pe/assets/images/logo-palmas.png" alt="" height="45" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-nav">
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+
+{% endblock content %}

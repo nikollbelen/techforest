@@ -1,0 +1,126 @@
+{% extends 'principal/plantilla.html' %}
+{% load static %}
+
+{% block banner %}
+<div class="col-md-11 col-lg-8 col-xl-4 pb-9 pb-xl-9 text-center text-xl-start">
+    <h1 class="text-white fw-light text-center">Como podemos ayudarte?</h1>
+    <p class="lead text-white opacity-75 text-center">
+        Enviamos un mensaje</p>
+</div>
+{% endblock banner %}
+
+{% block content %}
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+
+<div class="container">
+    <div class="row justify-content-center text-center mt-lg-5">
+        <div class="col-lg-8 col-xl-7 col-xxl-6">
+            <h1 class="fs-2 fs-sm-4 fs-md-5">CONTACTANOS</h1>
+        </div>
+    </div>
+</div>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+<div class="container">
+    <div class="tab-pane mb-3">
+        <form>
+            <div class="mb-3">
+                <label class="form-label" for="basic-form-name">Nombres</label>
+                <input class="form-control" id="basic-form-name" type="text" placeholder="Nombre" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="basic-form-name">Apellidos</label>
+                <input class="form-control" id="basic-form-name" type="text" placeholder="Apellidos" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="basic-form-email">Correo Electronico</label>
+                <input class="form-control" id="basic-form-email" type="email" placeholder="nombre@example.com" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="basic-form-gender">Sexo</label>
+                <select class="form-select" id="basic-form-gender" aria-label="Default select example">
+                    <option selected="selected">Selecciona</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="basic-form-textarea">Descripcion</label>
+                <textarea class="form-control" id="basic-form-textarea" rows="3" placeholder="Descripcion"></textarea>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success text-center" type="submit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mb-3">
+        <div class="bg-holder d-none d-lg-block bg-card"
+            style="background-image:url(/static/assets/img/illustrations/corner-4.png);">
+        </div>
+        <!--/.bg-holder-->
+    </div>
+    <div class="card mb-3">
+        <div class="card-header">
+            <div class="row flex-between-end">
+                <div class="text-center">
+                    <h3>Ubicacion</h3>
+                </div>
+                <div class="col-auto col-lg align-self-center">
+                    <h5 class="mb-0" data-anchor="data-anchor">TechForest Oficina</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card-body bg-light">
+            <div class="tab-content">
+                <div class="tab-pane preview-tab-pane active" role="tabpanel"
+                    aria-labelledby="tab-dom-afdcb052-4ef1-4bf7-9170-395f5b61a370"
+                    id="dom-afdcb052-4ef1-4bf7-9170-395f5b61a370">
+                    <div class="googlemap min-vh-50" data-latlng="-16.4291486,-71.5197713,20" data-scrollwheel="false"
+                        data-icon="{% static 'assets/img/icons/map-marker.png' %}" data-zoom="17" data-theme="Hopper">
+                        <div class="marker-content">
+                            <h5>Tecsup</h5>
+                            <p class="mb-0">José Luis Bustamante y Rivero 04009</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- <section> begin ============================-->
+<section class="light">
+
+    <div class="bg-holder overlay"
+        style="background-image:url(https://t4.ftcdn.net/jpg/02/97/30/07/360_F_297300732_pfJHla4gl5vCCUzQMHpovN7MokCWbfzG.jpg);background-position: center top;">
+    </div>
+    <!--/.bg-holder-->
+
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <p class="fs-3 fs-sm-4 text-white">Unete a nuestra aplicacion TechForest para mas informacion
+                    acerca de como se ha creado este proyecto.</p>
+                <a class="btn btn-outline-light border-2 rounded-pill btn-lg mt-4 fs-0 py-2" href="/contacto"
+                    type="button">Unete</a>
+            </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+{% endblock content %}

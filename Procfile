@@ -1,0 +1,1 @@
+web: gunicorn techForest.wsgi --log-file -

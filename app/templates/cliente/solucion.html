@@ -1,0 +1,55 @@
+{% extends 'cliente/plantilla.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-3 btn-reveal-trigger">
+            <div class="card-header d-flex flex-between-center pb-0">
+                <h6 class="mb-0">Clima</h6>
+
+            </div>
+            <div class="card-body pt-2">
+                <div class="row g-0 h-100 align-items-center">
+                    <div class="col">
+                        <div class="d-flex align-items-center"><img class="me-3"
+                                src="{% static 'assets/img/icons/weather-icon.png' %}" alt="" height="60" />
+                            <div>
+                                <h6 class="mb-2">Arequipa</h6>
+                                <div class="fs--2 fw-semi-bold">
+                                    <div class="text-warning">Soleado</div>Precipitacion:
+                                    50%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto text-center ps-2">
+                        <div class="fs-4 fw-normal font-sans-serif text-primary mb-1 lh-1">
+                            31&deg;</div>
+                        <div class="fs--1 text-800">32&deg; / 25&deg;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body overflow-hidden p-lg-6">
+        <div class="row align-items-center">
+            <div class="col-lg-12 ps-lg-4 my-4 text-center text-lg-start">
+                <h1 class="text-success text-center">Datos de la solucion</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 ps-lg-4 my-5 text-center text-lg-start">
+                <h2 class="text-primary">Riego Automatico</h2>
+                <p class="text-dark">Valor de humedad: {{ opciones.humedad }}</p>
+                <br>
+                <h2 class="text-primary">Valores</h2>
+                <p class="text-dark">Minimo: <span class="text-danger">{{ opciones.valor_minimo }}</span></p>
+                <p class="text-dark">Maximo: <span class="text-primary">{{ opciones.valor_maximo }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

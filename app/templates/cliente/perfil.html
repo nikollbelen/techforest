@@ -1,0 +1,58 @@
+{% extends 'cliente/plantilla.html' %}
+{% block content %}
+{% load static %}
+{% load widget_tweaks %} 
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-3 btn-reveal-trigger">
+            <div class="card-header position-relative min-vh-25 mb-8">
+                <div class="cover-image">
+                    <div class="bg-holder rounded-3 rounded-bottom-0"
+                        style="background-image:url('/static/assets/img/generic/4.jpg');">
+                    </div>
+                    <!--/.bg-holder-->
+                </div>
+                <div class="avatar avatar-5xl avatar-profile shadow-sm img-thumbnail rounded-circle">
+                    <div class="h-100 w-100 rounded-circle overflow-hidden position-relative"> <img
+                            src="{{ cliente.imagen_perfil.url }}" width="200" alt="" data-dz-thumbnail="data-dz-thumbnail" />
+                        <input class="d-none" id="profile-image" type="file" />
+                        <label class="mb-0 overlay-icon d-flex flex-center" for="profile-image"><span
+                                class="bg-holder overlay overlay-0"></span><span
+                                class="z-index-1 text-white text-center fs--1"><span class="fas fa-camera"></span><span
+                                    class="d-block">Actualizar</span></span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="mb-0">Configuración de perfil</h5>
+            </div>
+            <div class="card-body bg-light">
+                <form class="row g-3" method="POST" action="/cliente/{{ cliente.user_id }}/perfil">
+                    {% csrf_token %} 
+                    <div class="col-lg-6">
+                        <label class="form-label" for="first-name">Nombres</label>
+                        {% render_field form.nombres class="form-control" value="{{ cliente.nombres }}" type="text" %}
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="form-label" for="last-name">Apellidos</label>
+                        {% render_field form.apellidos class="form-control" value="{{ cliente.apellidos }}" type="text" %}
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="form-label" for="email1">Correo</label>
+                        {% render_field form.correo class="form-control" value="{{ cliente.correo }}" type="email" %}
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-success" type="submit">Update </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

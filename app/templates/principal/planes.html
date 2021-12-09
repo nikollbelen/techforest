@@ -1,0 +1,139 @@
+{% extends 'principal/plantilla.html' %}
+{% load static %}
+
+{% block banner %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} border-2 d-flex align-items-center" role="alert">
+                <div class="bg-success me-3 icon-item"><span class="fas fa-check-circle text-white fs-3"></span></div>
+                <p class="mb-0 flex-1">{{ message }}</p>
+                <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="col-md-11 col-lg-8 col-xl-4 pb-9 pb-xl-9 text-center text-xl-start">
+        <h1 class="text-white fw-light text-center">Elige tu plan</h1>
+        <p class="lead text-white opacity-75 text-center">
+            Tenemos planes para uso empresarial y para uso personal</p>
+    </div>
+{% endblock banner %}
+
+{% block content %}
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <br>
+                <br>
+                <div class="col-12 col-lg-9 col-xl-10 col-xxl-8">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <div class="border rounded-3 overflow-hidden mb-3 mb-md-0">
+                                <div class="d-flex flex-between-center p-4">
+                                    <div>
+                                        <h3 class="fw-light fs-5 mb-0 text-success">Personal</h3>
+                                        <h2 class="fw-light mt-0 text-success"><sup class="fs-1">&dollar;</sup><span
+                                                class="fs-3">0</span><span class="fs--2 mt-1">/ m</span></h2>
+                                    </div>
+                                    <div class="pe-3"><img src="https://cdn-icons-png.flaticon.com/128/1402/1402118.png"
+                                                           width="70" alt=""/></div>
+                                </div>
+                                <div class="p-4 bg-light">
+                                    <ul class="list-unstyled">
+                                        <br>
+                                        <li class="border-bottom py-2"> <span class="fas fa-check text-success"
+                                                                              data-fa-transform="shrink-2"> </span>
+                                            Sensor de humedad
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom text-300"><span class="fas fa-check"
+                                                                                      data-fa-transform="shrink-2"></span>
+                                            Sensor de temperatura
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom text-300"><span class="fas fa-check"
+                                                                                      data-fa-transform="shrink-2"></span>
+                                            Instalacion gratuita
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Aplicativo movil
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Soporte web
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Garantia de 1 año
+                                        </li>
+                                        <br>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md">
+                            <div class="border rounded-3 overflow-hidden">
+                                <div class="d-flex flex-between-center p-4">
+                                    <div>
+                                        <h3 class="fw-light text-success fs-5 mb-0">Empresarial</h3>
+                                        <h2 class="fw-light text-success mt-0"><sup class="fs-1">&dollar;</sup><span
+                                                class="fs-3">99</span><span class="fs--2 mt-1">/ m</span></h2>
+                                    </div>
+                                    <div class="pe-3"><img src="https://cdn-icons-png.flaticon.com/128/2761/2761008.png"
+                                                           width="70" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-light">
+                                    <ul class="list-unstyled">
+                                        <br>
+                                        <li class="border-bottom py-2"> <span class="fas fa-check text-success"
+                                                                              data-fa-transform="shrink-2"> </span>
+                                            Sensor de humedad
+                                        </li>
+                                        <br>
+                                        <li class="border-bottom py-2"> <span class="fas fa-check text-success"
+                                                                              data-fa-transform="shrink-2"></span>
+                                            Sensor de temperatura
+                                        </li>
+                                        <br>
+                                        <li class="border-bottom py-2"> <span class="fas fa-check text-success"
+                                                                              data-fa-transform="shrink-2"></span>
+                                            Instalacion gratuita
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Aplicativo movil
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Soporte web
+                                        </li>
+                                        <br>
+                                        <li class="py-2 border-bottom"><span class="fas fa-check text-success"
+                                                                             data-fa-transform="shrink-2"></span>
+                                            Garantia de 5 años
+                                        </li>
+                                        <br>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+{% endblock content %}
